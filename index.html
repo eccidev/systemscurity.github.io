@@ -1,6 +1,72 @@
 <html>
 	<head>
 		<title>Welcome to aaaaaaa!!</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background-color: #f0f8ff;
+				padding: 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				text-align: center;
+				color: #2c3e50;
+				margin-bottom: 2rem;
+				font-size: 2.5em;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+				padding: 1rem;
+				border-bottom: 3px solid #3498db;
+			}
+
+			div {
+				background-color: white;
+				padding: 1.2rem;
+				margin: 0.8rem 0;
+				border-radius: 10px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				border-left: 4px solid #3498db;
+			}
+
+			div:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			}
+
+			div:nth-child(odd) {
+				background-color: #f8f9fa;
+			}
+
+			.me-llamo {
+				color: #e74c3c;
+				font-weight: 600;
+			}
+
+			.soy {
+				color: #2ecc71;
+				font-style: italic;
+			}
+
+			@media (min-width: 768px) {
+				body {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+					gap: 1.5rem;
+				}
+				
+				h1 {
+					grid-column: 1 / -1;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div><h1>Hola UniEccistas!!</h1></div>
@@ -8,27 +74,27 @@
 		<div>Angie</div>
 		<div>Freddy</div>
 		<div>Yurline</div>
-		<div>Felipe y me gusta el tenis y jugar clash royale</div>
-		<div>Laura y me gusta eschuchar musica </div>
-		<div>Andres  y me gusta el futbol y la NBA </div>
-		<div> Me llamo Camilo y me gusta jugar baloncesto</div>
-		<div>Me llamo Lauren y me gusta el deporte</div>
-		<div>Me llamo Patiño y me gusta dormir</div>
-		<div>Sebastian me gusta la musica y la F1</div>
-		<div>¡Holaaa! soy Camila, les voy a contar de mi jejej, me guta mucho leer, practicar crochet, amo salir a pasear a conocer lugares nuevos tambien soy una persona que me gusta el arte. </div>
+		<div class="me-llamo">Felipe y me gusta el tenis y jugar clash royale</div>
+		<div class="me-llamo">Laura y me gusta eschuchar musica </div>
+		<div class="me-llamo">Andres  y me gusta el futbol y la NBA </div>
+		<div class="me-llamo">Me llamo Camilo y me gusta jugar baloncesto</div>
+		<div class="me-llamo">Me llamo Lauren y me gusta el deporte</div>
+		<div class="me-llamo">Me llamo Patiño y me gusta dormir</div>
+		<div class="me-llamo">Sebastian me gusta la musica y la F1</div>
+		<div class="soy">¡Holaaa! soy Camila, les voy a contar de mi jejej, me guta mucho leer, practicar crochet, amo salir a pasear a conocer lugares nuevos tambien soy una persona que me gusta el arte. </div>
 		<div>Catalina</div>
 		<div>Santiago</div>
 		<div>Johan</div>
-		<div>Me llamo Daniel Vela y me gustan mucho los videojuegos</div>
+		<div class="me-llamo">Me llamo Daniel Vela y me gustan mucho los videojuegos</div>
 		<div>Camilo C</div>
 		<div>Brayan</div>
 		<div>Manuel</div>
-		<div>Me llamo Daniela y me gusta jugar baloncesto y escuchar musica</div>
-		<div>Me llamo Angely y me gusta jugar futbol y ver peliculas</div>
-		<div>Me llamo Luisa y me gusta viajar</div>
-		<div>Mi nombre es Nicolas Rojas y me gusta el dinero $-$</div>
-		<div>Soy santiago franki y me gustan los jueguitos de pc y cositas.</div>
+		<div class="me-llamo">Me llamo Daniela y me gusta jugar baloncesto y escuchar musica</div>
+		<div class="me-llamo">Me llamo Angely y me gusta jugar futbol y ver peliculas</div>
+		<div class="me-llamo">Me llamo Luisa y me gusta viajar</div>
+		<div class="me-llamo">Mi nombre es Nicolas Rojas y me gusta el dinero $-$</div>
+		<div class="soy">Soy santiago franki y me gustan los jueguitos de pc y cositas.</div>
 		<div>Mauricio</div>
-		<div>Me llamo Alejandro Aguilera y me gusta jugar videojuegos y escuchar musica</div>		
+		<div class="me-llamo">Me llamo Alejandro Aguilera y me gusta jugar videojuegos y escuchar musica</div>		
 	</body>
 </html>
