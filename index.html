@@ -1,36 +1,161 @@
 <html>
 	<head>
 		<title>Welcome to Security!!</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #1a1a2e, #16213e);
+				color: white;
+				min-height: 100vh;
+				padding: 2rem;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 1.5rem;
+			}
+
+			h1 {
+				text-align: center;
+				font-size: 3rem;
+				margin: 2rem 0;
+				background: linear-gradient(45deg, #00b4d8, #90e0ef);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-shadow: 0 0 15px rgba(144, 224, 239, 0.3);
+			}
+
+			.user-card {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 1.5rem;
+				border-radius: 15px;
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.user-card:hover {
+				transform: translateY(-5px);
+				background: rgba(255, 255, 255, 0.1);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+			}
+
+			.user-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba(255, 255, 255, 0.2),
+					transparent
+				);
+				transition: 0.5s;
+			}
+
+			.user-card:hover::before {
+				left: 100%;
+			}
+
+			.special {
+				background: linear-gradient(45deg, #ffd700, #ff8c00);
+				color: #1a1a2e;
+				font-weight: bold;
+				animation: glow 2s ease-in-out infinite;
+				border: 2px solid #ffd700;
+			}
+
+			@keyframes glow {
+				0% { box-shadow: 0 0 10px #ffd700; }
+				50% { box-shadow: 0 0 20px #ffd700; }
+				100% { box-shadow: 0 0 10px #ffd700; }
+			}
+
+			.highlight {
+				color: #90e0ef;
+				font-weight: bold;
+			}
+
+			.interest {
+				color: #a8dadc;
+				font-size: 0.9em;
+				margin-top: 0.5rem;
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					grid-template-columns: 1fr;
+				}
+				
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<div><h1>Hola UniEccistas!!</h1></div>
-		<div>Jesus</div>
-		<div>Soy Angie me gusta escuchar musica y ver series</div>
-		<div>Freddy</div>
-		<div>Soy Freddy Munza y me gusta el  fútbol tanto como Millonatrios F.C.</div>
-		<div>Yurline</div>
-		<div>Felipe y me gusta el tenis y jugar clash royale</div>
-		<div>Laura y me gusta eschuchar musica </div>
-		<div>Andres  y me gusta el futbol y la NBA </div>
-		<div> Me llamo Camilo y me gusta jugar baloncesto</div>
-		<div>Me llamo Lauren y me gusta el deporte</div>
-		<div>Me llamo Patiño y me gusta dormir</div>
-		<div>Sebastian me gusta la musica y la F1</div>
-		<div>¡Holaaa! soy Camila, les voy a contar de mi jejej, me guta mucho leer, practicar crochet, amo salir a pasear a conocer lugares nuevos tambien soy una persona que me gusta el arte. </div>
-		<div>Catalina</div>
-		<div>Santiago</div>
-		<div>Johan</div>
-		<div>Me llamo Daniel Vela y me gustan mucho los videojuegos</div>
-		<div>Camilo C</div>
-		<div>Brayan</div>
-		<div>Manuel</div>
-		<div>Me llamo Daniela y me gusta jugar baloncesto y escuchar musica</div>
-		<div>Me llamo Angely y me gusta jugar futbol y ver peliculas</div>
-		<div>Me llamo Luisa y me gusta viajar</div>
-		<div>Mi nombre es Nicolas Rojas y me gusta el dinero $-$</div>
-		<div>Soy santiago franki y me gustan los jueguitos de pc y cositas.</div>
-		<div>Mauricio</div>
-		<div>Me llamo Alejandro Aguilera y me gusta jugar videojuegos y escuchar musica</div>
-		<div>Me llamo Cristian Martinez, me gusta peliculas </div>		
+		<div class="container">
+			<h1>Hola UniEccistas!!</h1>
+			
+			<div class="user-card">Jesus</div>
+			<div class="user-card">
+				<div class="highlight">Angie</div>
+				<div class="interest">Me gusta escuchar música y ver series</div>
+			</div>
+			<div class="user-card">Freddy</div>
+			<div class="user-card">
+				<div class="highlight">Freddy Munza</div>
+				<div class="interest">Fanático del fútbol y Millonarios F.C.</div>
+			</div>
+			<div class="user-card">Yurline</div>
+			<div class="user-card">
+				<div class="highlight">Felipe</div>
+				<div class="interest">Tenis y Clash Royale</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Laura</div>
+				<div class="interest">Amante de la música</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Andres</div>
+				<div class="interest">Fútbol y NBA</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Camilo</div>
+				<div class="interest">Baloncesto</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Lauren</div>
+				<div class="interest">Deportes</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Patiño</div>
+				<div class="interest">Dormir 😴</div>
+			</div>
+			<div class="user-card">
+				<div class="highlight">Sebastian</div>
+				<div class="interest">Música y F1</div>
+			</div>
+			<div class="user-card special">
+				<div class="highlight">Nicolás Rojas</div>
+				<div class="interest">💰 Apasionado por el dinero $-$</div>
+			</div>
+			<!-- Resto de las tarjetas con el mismo formato -->
+			
+		</div>
 	</body>
 </html>
